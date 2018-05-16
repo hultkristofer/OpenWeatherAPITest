@@ -7,8 +7,18 @@ It allows quick and easy consumption of OWM weather data from Python application
 
 https://github.com/csparpa/pyowm
 
+install using
 
 $ pip install pyowm
+
+
+Using this module so I do not have to worry about maintaing the API connection.
+
+Ran into issues with Visual Studio not reconizing the Module was installed and only opening in Visual Studio.
+
+Ways to imporove:
+
+Add in tests for valid city, no numbers, only str/english characters are entered
 '''
 
 
@@ -20,11 +30,16 @@ def apiCall(city_name):
     owm = pyowm.OWM('1530b5062d6129f35937dbb26cc05fbe') #sets my API Key'
     observation = owm.weather_at_place(city_name) #using pyowm to pull weather for city_name'
     w = observation.get_weather() #sets the pulled weather as w'
-    tempC= "is degrees Celsius" + w.get_temperature('celsius') #adding a message and temp in Celsius
-    tempF= "and degrees Fahrenheit" + w.get_temperature('fahrenheit') #adding a message and temp in Fahrenheit
-    windSpeed ="while the wind speed is" + w.get_wind() #adding a message and wind speed
+    tempCDict = w.get_temperature('celsius') #Dictionary of Temp in C
+    tempC= " in degrees Celsius is " + str((tempCDict).get('temp')) #adding a message and temp in Celsius
 
-    weatherStr = "Weather for" + city_name + tempC  + tempF  + windSpeed #combining what I want to display with the temp and wind to be printed
+    tempFDict = w.get_temperature('fahrenheit') #Dictionary of Temp in F
+    tempF= " and in degrees Fahrenheit is " + str((tempFDict).get('temp')) #adding a message and temp in Fahrenheit
+
+    windSpeedDict = w.get_wind() #Dictionary of Wind Speed
+    windSpeed =" while the wind speed in MPH is " + str((windSpeedDict).get('speed')) #adding a message and wind speed
+
+    weatherStr = "The temperature for " + city_name + tempC  + tempF  + windSpeed #combining what I want to display with the temp and wind to be printed
     return (weatherStr)
 
 
