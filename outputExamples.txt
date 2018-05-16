@@ -1,0 +1,109 @@
+Examples from Visual Studio Interactive Environment, python 3.4
+
+
+>>> city_name = input("What city would you like the weather for?") # use prompt to get city name and store in city_name
+What city would you like the weather for?
+iowa city
+
+>>> def apiCall(city_name):
+... 
+...     import pyowm #imports pyOWM'
+...     owm = pyowm.OWM('1530b5062d6129f35937dbb26cc05fbe') #sets my API Key'
+...     observation = owm.weather_at_place(city_name) #using pyowm to pull weather for city_name'
+...     w = observation.get_weather() #sets the pulled weather as w'
+...     tempCDict = w.get_temperature('celsius') #Dictionary of Temp in C
+...     tempC= "is degrees Celsius" + str((tempCDict).get('temp')) #adding a message and temp in Celsius
+... 
+...     tempFDict = w.get_temperature('fahrenheit') #Dictionary of Temp in F
+...     tempF= "and degrees Fahrenheit" + str((tempFDict).get('temp')) #adding a message and temp in Fahrenheit
+... 
+...     windSpeedDict = w.get_wind() #Dictionary of Wind Speed
+...     windSpeed ="while the wind speed is" + str((windSpeedDict).get('speed')) #adding a message and wind speed
+... 
+...     weatherStr = "Weather for" + city_name + tempC  + tempF  + windSpeed #combining what I want to display with the temp and wind to be printed
+...     return (weatherStr)
+... 
+... 
+>>> print(apiCall(city_name))
+Weather foriowa cityis degrees Celsius27.2and degrees Fahrenheit80.96while the wind speed is2.1
+
+#Above is before adding in more spaces to string values
+
+>>> city_name = input("What city would you like the weather for?") # use prompt to get city name and store in city_name
+What city would you like the weather for?
+iowa city
+
+>>> def apiCall(city_name):
+... 
+...     import pyowm #imports pyOWM'
+...     owm = pyowm.OWM('1530b5062d6129f35937dbb26cc05fbe') #sets my API Key'
+...     observation = owm.weather_at_place(city_name) #using pyowm to pull weather for city_name'
+...     w = observation.get_weather() #sets the pulled weather as w'
+...     tempCDict = w.get_temperature('celsius') #Dictionary of Temp in C
+...     tempC= " is degrees Celsius " + str((tempCDict).get('temp')) #adding a message and temp in Celsius
+... 
+...     tempFDict = w.get_temperature('fahrenheit') #Dictionary of Temp in F
+...     tempF= " and degrees Fahrenheit " + str((tempFDict).get('temp')) #adding a message and temp in Fahrenheit
+... 
+...     windSpeedDict = w.get_wind() #Dictionary of Wind Speed
+...     windSpeed =" while the wind speed is " + str((windSpeedDict).get('speed')) #adding a message and wind speed
+... 
+...     weatherStr = "The weather for " + city_name + tempC  + tempF  + windSpeed #combining what I want to display with the temp and wind to be printed
+...     return (weatherStr)
+... 
+... 
+>>> print(apiCall(city_name))
+The weather for iowa city is degrees Celsius 27.2 and degrees Fahrenheit 80.96 while the wind speed is 2.1
+
+
+>>> city_name = input("What city would you like the weather for?") # use prompt to get city name and store in city_name
+What city would you like the weather for?
+iowa city
+
+>>> def apiCall(city_name):
+... 
+...     import pyowm #imports pyOWM'
+...     owm = pyowm.OWM('1530b5062d6129f35937dbb26cc05fbe') #sets my API Key'
+...     observation = owm.weather_at_place(city_name) #using pyowm to pull weather for city_name'
+...     w = observation.get_weather() #sets the pulled weather as w'
+...     tempCDict = w.get_temperature('celsius') #Dictionary of Temp in C
+...     tempC= " in degrees Celsius is" + str((tempCDict).get('temp')) #adding a message and temp in Celsius
+... 
+...     tempFDict = w.get_temperature('fahrenheit') #Dictionary of Temp in F
+...     tempF= " and is in degrees Fahrenheit " + str((tempFDict).get('temp')) #adding a message and temp in Fahrenheit
+... 
+...     windSpeedDict = w.get_wind() #Dictionary of Wind Speed
+...     windSpeed =" while the wind speed in MPH is " + str((windSpeedDict).get('speed')) #adding a message and wind speed
+... 
+...     weatherStr = "The temperature for " + city_name + tempC  + tempF  + windSpeed #combining what I want to display with the temp and wind to be printed
+...     return (weatherStr)
+... 
+... 
+>>> print(apiCall(city_name))
+The temperature for iowa city in degrees Celsius is27.2 and is in degrees Fahrenheit 80.96 while the wind speed in MPH is 2.1
+
+What city would you like the weather for?
+London
+
+>>> def apiCall(city_name):
+... 
+...     import pyowm #imports pyOWM'
+...     owm = pyowm.OWM('1530b5062d6129f35937dbb26cc05fbe') #sets my API Key'
+...     observation = owm.weather_at_place(city_name) #using pyowm to pull weather for city_name'
+...     w = observation.get_weather() #sets the pulled weather as w'
+...     tempCDict = w.get_temperature('celsius') #Dictionary of Temp in C
+...     tempC= " in degrees Celsius is " + str((tempCDict).get('temp')) #adding a message and temp in Celsius
+... 
+...     tempFDict = w.get_temperature('fahrenheit') #Dictionary of Temp in F
+...     tempF= " and in degrees Fahrenheit is " + str((tempFDict).get('temp')) #adding a message and temp in Fahrenheit
+... 
+...     windSpeedDict = w.get_wind() #Dictionary of Wind Speed
+...     windSpeed =" while the wind speed in MPH is " + str((windSpeedDict).get('speed')) #adding a message and wind speed
+... 
+...     weatherStr = "The temperature for " + city_name + tempC  + tempF  + windSpeed #combining what I want to display with the temp and wind to be printed
+...     return (weatherStr)
+... 
+... 
+>>> print(apiCall(city_name))
+The temperature for London in degrees Celsius is 8.33 and in degrees Fahrenheit is 46.99 while the wind speed in MPH is 4.6
+>>> 
