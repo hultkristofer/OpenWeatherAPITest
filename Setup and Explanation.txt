@@ -1,0 +1,30 @@
+Using PyOWM to pull from API.
+
+PyOWM is a client Python wrapper library for the OpenWeatherMap (OWM) web API.
+
+It allows quick and easy consumption of OWM weather data from Python applications via a simple object model and in a human-friendly fashion.
+
+https://github.com/csparpa/pyowm
+
+install using
+
+$ pip install pyowm
+
+
+Using this module so I do not have to worry about maintaing the API connection.
+
+Ran into issues with Visual Studio not recognizing the Module was installed and only opening in Visual Studio.
+
+Ways to improve:
+
+Add in tests for valid city, no numbers, only str/english characters are entered
+
+
+Same as what is in the .py file
+
+
+Running:
+
+1. Run by launching file openWeatherAPI Test.py
+2. Enter city name when prompted
+3. Should show weather in printed statement.

@@ -14,9 +14,9 @@ $ pip install pyowm
 
 Using this module so I do not have to worry about maintaing the API connection.
 
-Ran into issues with Visual Studio not reconizing the Module was installed and only opening in Visual Studio.
+Ran into issues with Visual Studio not recognizing the Module was installed and only opening in Visual Studio.
 
-Ways to imporove:
+Ways to improve:
 
 Add in tests for valid city, no numbers, only str/english characters are entered
 '''
