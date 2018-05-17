@@ -1,0 +1,7 @@
+============================= test session starts ==============================
+platform linux -- Python 3.4.6, pytest-3.0.7, py-1.4.33, pluggy-0.4.0
+rootdir: /home/travis/build/hultkristofer/OpenWeatherAPITest, inifile:
+collected 0 items 
+========================= no tests ran in 0.00 seconds =========================
+The command "py.test" exited with 5.
+Done. Your build exited with 1.
