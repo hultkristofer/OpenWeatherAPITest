@@ -6,4 +6,4 @@ install:
 - pip install pyowm
 
 script:
-- py.test
+- py.test test_auth.py
